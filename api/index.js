@@ -107,7 +107,7 @@ app.post("/api/login", async (req, res) => {
         });
       }
     } else {
-      res.json("User not found...");
+      res.json(false);
     }
 
   } catch(err) {
