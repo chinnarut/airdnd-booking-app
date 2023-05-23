@@ -18,9 +18,13 @@ const LoginPage = () => {
         password
       });
 
-      setUser(data);
-      alert("Login successfull...");
-      setRedirect(true);
+      if(data) {
+        setUser(data);
+        alert("Login successfull...");
+        setRedirect(true);
+      } else {
+        alert("User not found...")
+      }
     } catch(err) {
       alert("Login fail, please try again...");
     }   
